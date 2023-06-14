@@ -1,0 +1,23 @@
+<div class="uk-container">
+    <div class="uk-grid uk-marign-small-top">
+        <div class="uk-width-1-2 uk-margin-small-top" 
+            *ngFor="let product of products$ | async">
+            <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+                <div class="uk-card-media-left uk-cover-container">
+                    <img src="{{ product.images }}" alt="" uk-cover>
+                    <canvas width="400" height="450"></canvas>
+                </div>
+                <div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">{{ product.title }}</h3>
+                        <p>{{ product.price }}</p>
+                        <button class="uk-button uk-button-default">
+                            <span class="uk-icon uk-margin-small-right" uk-icon="icon: cart"></span>
+                            Adicionar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
